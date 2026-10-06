@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "boxCost": 30,
+  "shardsPerDuplicate": { "common": 2, "rare": 4, "secret": 8 },
+  "craftCost": { "common": 6, "rare": 12, "secret": 24 },
+  "dropRates": { "common": 70, "rare": 25, "secret": 5 },
+  "series": [
+    {
+      "id": "forest",
+      "titleFa": "دوستان جنگل",
+      "titleEn": "Forest Friends",
+      "subjectFa": "حیوانات به انگلیسی",
+      "kind": "english",
+      "color": "#FF7BC67E",
+      "emoji": "🌳",
+      "boxLook": "a cute pastel green collectible blind box, decorated with little leaves, mushrooms and tiny paw prints, with a big question mark sticker on the front"
+    },
+    {
+      "id": "fruits",
+      "titleFa": "مهمانی میوه‌ها",
+      "titleEn": "Fruit Party",
+      "subjectFa": "میوه‌ها به انگلیسی",
+      "kind": "english",
+      "color": "#FFFF8A80",
+      "emoji": "🍓",
+      "boxLook": "a cute pastel pink collectible blind box, decorated with tiny strawberries, cherries and lemons, with a big question mark sticker on the front"
+    },
+    {
+      "id": "tales",
+      "titleFa": "قصه‌ها و شعرها",
+      "titleEn": "Tales & Poems",
+      "subjectFa": "ادبیات فارسی و ضرب‌المثل",
+      "kind": "literature",
+      "color": "#FF9575CD",
+      "emoji": "📜",
+      "boxLook": "a cute pastel purple collectible blind box, decorated with gold Persian tile patterns, little stars and a crescent moon, with a big question mark sticker on the front"
+    }
+  ],
+  "dolls": [
+    {
+      "id": "forest_cat", "series": "forest", "rarity": "common", "emoji": "🐱",
+      "nameFa": "میمی گربه", "nameEn": "Mimi the Cat",
+      "word": "cat", "wordFa": "گربه",
+      "sentence": "The cat says meow.", "sentenceFa": "گربه می‌گوید میو.",
+      "look": "a grey kitten creature with pointy ears, a pink nose and a tiny bell collar"
+    },
+    {
+      "id": "forest_dog", "series": "forest", "rarity": "common", "emoji": "🐶",
+      "nameFa": "بوبو سگ", "nameEn": "Bobo the Dog",
+      "word": "dog", "wordFa": "سگ",
+      "sentence": "The dog can run fast.", "sentenceFa": "سگ می‌تواند تند بدود.",
+      "look": "a cream puppy creature with floppy brown ears and a red scarf"
+    },
+    {
+      "id": "forest_rabbit", "series": "forest", "rarity": "common", "emoji": "🐰",
+      "nameFa": "هاپی خرگوش", "nameEn": "Hoppy the Rabbit",
+      "word": "rabbit", "wordFa": "خرگوش",
+      "sentence": "The rabbit likes carrots.", "sentenceFa": "خرگوش هویج دوست دارد.",
+      "look": "a white bunny creature with very long ears, holding a small orange carrot"
+    },
+    {
+      "id": "forest_bear", "series": "forest", "rarity": "common", "emoji": "🐻",
+      "nameFa": "بوبی خرس", "nameEn": "Bubu the Bear",
+      "word": "bear", "wordFa": "خرس",
+      "sentence": "The bear is big and brown.", "sentenceFa": "خرس بزرگ و قهوه‌ای است.",
+      "look": "a chubby brown bear cub creature holding a little honey pot"
+    },
+    {
+      "id": "forest_frog", "series": "forest", "rarity": "common", "emoji": "🐸",
+      "nameFa": "فیفی قورباغه", "nameEn": "Fifi the Frog",
+      "word": "frog", "wordFa": "قورباغه",
+      "sentence": "The frog can jump.", "sentenceFa": "قورباغه می‌تواند بپرد.",
+      "look": "a bright green frog creature with big round eyes, wearing a tiny lily-pad hat"
+    },
+    {
+      "id": "forest_fox", "series": "forest", "rarity": "rare", "emoji": "🦊",
+      "nameFa": "رورو روباه", "nameEn": "Roro the Fox",
+      "word": "fox", "wordFa": "روباه",
+      "sentence": "The fox is orange.", "sentenceFa": "روباه نارنجی است.",
+      "look": "an orange fox creature with a fluffy white-tipped tail and a little green backpack"
+    },
+    {
+      "id": "forest_owl", "series": "forest", "rarity": "rare", "emoji": "🦉",
+      "nameFa": "هوهو جغد", "nameEn": "Hoho the Owl",
+      "word": "owl", "wordFa": "جغد",
+      "sentence": "The owl sleeps in the day.", "sentenceFa": "جغد روزها می‌خوابد.",
+      "look": "a round brown owl creature with huge eyes and tiny round glasses, holding a book"
+    },
+    {
+      "id": "forest_lion", "series": "forest", "rarity": "secret", "emoji": "🦁",
+      "nameFa": "شاه لئو", "nameEn": "King Leo",
+      "word": "lion", "wordFa": "شیر",
+      "sentence": "The lion is the king of the jungle.", "sentenceFa": "شیر سلطان جنگل است.",
+      "look": "a golden lion cub creature with a big fluffy mane and a tiny shiny gold crown, sparkles around it"
+    },
+
+    {
+      "id": "fruits_apple", "series": "fruits", "rarity": "common", "emoji": "🍎",
+      "nameFa": "اپی سیب", "nameEn": "Appi the Apple",
+      "word": "apple", "wordFa": "سیب",
+      "sentence": "I eat a red apple.", "sentenceFa": "من یک سیب قرمز می‌خورم.",
+      "look": "a creature wearing a red apple costume with a green leaf on top of its head"
+    },
+    {
+      "id": "fruits_banana", "series": "fruits", "rarity": "common", "emoji": "🍌",
+      "nameFa": "نانا موز", "nameEn": "Nana the Banana",
+      "word": "banana", "wordFa": "موز",
+      "sentence": "The banana is yellow.", "sentenceFa": "موز زرد است.",
+      "look": "a creature wearing a yellow banana-peel hoodie"
+    },
+    {
+      "id": "fruits_orange", "series": "fruits", "rarity": "common", "emoji": "🍊",
+      "nameFa": "اورنو پرتقال", "nameEn": "Orno the Orange",
+      "word": "orange", "wordFa": "پرتقال",
+      "sentence": "I drink orange juice.", "sentenceFa": "من آب پرتقال می‌نوشم.",
+      "look": "a round creature wearing an orange fruit costume, holding a tiny juice glass"
+    },
+    {
+      "id": "fruits_grapes", "series": "fruits", "rarity": "common", "emoji": "🍇",
+      "nameFa": "گریپی انگور", "nameEn": "Grapy the Grapes",
+      "word": "grapes", "wordFa": "انگور",
+      "sentence": "Grapes are small and sweet.", "sentenceFa": "انگورها کوچک و شیرین هستند.",
+      "look": "a creature wearing a purple bunch-of-grapes costume with a curly vine on its head"
+    },
+    {
+      "id": "fruits_strawberry", "series": "fruits", "rarity": "common", "emoji": "🍓",
+      "nameFa": "بری توت‌فرنگی", "nameEn": "Berry the Strawberry",
+      "word": "strawberry", "wordFa": "توت‌فرنگی",
+      "sentence": "The strawberry is red.", "sentenceFa": "توت‌فرنگی قرمز است.",
+      "look": "a creature wearing a red strawberry hat with little seeds and green leaves"
+    },
+    {
+      "id": "fruits_watermelon", "series": "fruits", "rarity": "rare", "emoji": "🍉",
+      "nameFa": "ملو هندوانه", "nameEn": "Melo the Watermelon",
+      "word": "watermelon", "wordFa": "هندوانه",
+      "sentence": "Watermelon is good in summer.", "sentenceFa": "هندوانه در تابستان خوب است.",
+      "look": "a creature wearing a watermelon-slice costume, green outside and pink with black seeds inside, holding a beach ball"
+    },
+    {
+      "id": "fruits_cherry", "series": "fruits", "rarity": "rare", "emoji": "🍒",
+      "nameFa": "چی‌چی گیلاس", "nameEn": "Chichi the Cherry",
+      "word": "cherry", "wordFa": "گیلاس",
+      "sentence": "Two cherries are friends.", "sentenceFa": "دو گیلاس با هم دوست هستند.",
+      "look": "twin little creatures wearing red cherry hats joined by one green stem, holding hands"
+    },
+    {
+      "id": "fruits_pineapple", "series": "fruits", "rarity": "secret", "emoji": "🍍",
+      "nameFa": "پرنسس پینا", "nameEn": "Princess Pina",
+      "word": "pineapple", "wordFa": "آناناس",
+      "sentence": "The pineapple has a crown.", "sentenceFa": "آناناس یک تاج دارد.",
+      "look": "a golden pineapple princess creature with spiky green leaf crown and sunglasses, sparkles around it"
+    },
+
+    {
+      "id": "tales_suske", "series": "tales", "rarity": "common", "emoji": "🪲",
+      "nameFa": "خاله سوسکه", "nameEn": "Auntie Beetle",
+      "textFa": "قطره قطره جمع گردد، وانگهی دریا شود",
+      "sourceFa": "ضرب‌المثل",
+      "meaningFa": "چیزهای کوچک کم‌کم جمع می‌شوند و چیز بزرگی می‌سازند. هر روز کمی تلاش کن!",
+      "look": "a cute little black beetle girl creature wearing a red chador-style headscarf with white polka dots and tiny red shoes, carrying a small bundle"
+    },
+    {
+      "id": "tales_kadu", "series": "tales", "rarity": "common", "emoji": "🎃",
+      "nameFa": "کدو قلقله‌زن", "nameEn": "Rolling Pumpkin",
+      "textFa": "هر که بامش بیش، برفش بیشتر",
+      "sourceFa": "ضرب‌المثل",
+      "meaningFa": "هر کس چیز بیشتری دارد، کار و مسئولیتش هم بیشتر است.",
+      "look": "a round orange pumpkin creature with a tiny grandma peeking out of a door in the pumpkin, rolling happily"
+    },
+    {
+      "id": "tales_shangul", "series": "tales", "rarity": "common", "emoji": "🐐",
+      "nameFa": "شنگول", "nameEn": "Shangul",
+      "textFa": "بنی‌آدم اعضای یک پیکرند / که در آفرینش ز یک گوهرند",
+      "sourceFa": "سعدی",
+      "meaningFa": "همهٔ آدم‌ها مثل اعضای یک بدن هستند؛ باید به هم کمک کنیم و مهربان باشیم.",
+      "look": "a white baby goat creature with tiny horns and a blue bow, cheerful"
+    },
+    {
+      "id": "tales_mangul", "series": "tales", "rarity": "common", "emoji": "🐐",
+      "nameFa": "منگول", "nameEn": "Mangul",
+      "textFa": "توانا بود هر که دانا بود / ز دانش دل پیر برنا بود",
+      "sourceFa": "فردوسی",
+      "meaningFa": "کسی که دانش دارد قوی است؛ یاد گرفتن حتی آدم‌های پیر را جوان و شاد می‌کند.",
+      "look": "a light brown baby goat creature with tiny horns and a yellow bow, holding a small book"
+    },
+    {
+      "id": "tales_hasani", "series": "tales", "rarity": "common", "emoji": "👦",
+      "nameFa": "حسنی", "nameEn": "Hasani",
+      "textFa": "از کوزه همان برون تراود که در اوست",
+      "sourceFa": "باباافضل کاشانی",
+      "meaningFa": "هر کسی همان چیزی را نشان می‌دهد که در دلش دارد؛ دل خود را پر از خوبی کنیم.",
+      "look": "a playful village boy creature with messy black hair, a striped shirt, riding a tiny wooden toy horse"
+    },
+    {
+      "id": "tales_mulla", "series": "tales", "rarity": "rare", "emoji": "🧔",
+      "nameFa": "ملانصرالدین", "nameEn": "Mulla Nasreddin",
+      "textFa": "دوست آن باشد که گیرد دست دوست / در پریشان‌حالی و درماندگی",
+      "sourceFa": "سعدی",
+      "meaningFa": "دوست واقعی کسی است که وقتی ناراحت هستی یا کمک لازم داری، کنارت باشد.",
+      "look": "a funny old wise man creature with a big white turban and a long white beard, sitting backwards on a tiny grey donkey"
+    },
+    {
+      "id": "tales_rakhsh", "series": "tales", "rarity": "rare", "emoji": "🐴",
+      "nameFa": "رخش", "nameEn": "Rakhsh",
+      "textFa": "ز گهواره تا گور دانش بجوی",
+      "sourceFa": "ضرب‌المثل",
+      "meaningFa": "از کودکی تا پیری باید یاد بگیریم؛ یادگیری هیچ‌وقت تمام نمی‌شود.",
+      "look": "a brave little reddish-brown horse creature with a flowing dark mane and a small ancient Persian saddle with gold details"
+    },
+    {
+      "id": "tales_simorgh", "series": "tales", "rarity": "secret", "emoji": "🦚",
+      "nameFa": "سیمرغ", "nameEn": "Simorgh",
+      "textFa": "به نام خداوند جان و خرد / کزین برتر اندیشه برنگذرد",
+      "sourceFa": "فردوسی",
+      "meaningFa": "شاهنامه با این بیت شروع می‌شود؛ جان و خرد (عقل) بزرگ‌ترین هدیه‌ها هستند.",
+      "look": "a majestic but cute mythical Persian bird creature with long rainbow peacock-like tail feathers in turquoise, gold and purple, glowing, sparkles around it"
+    }
+  ],
+  "words": [
+    { "en": "cat", "fa": "گربه", "emoji": "🐱" },
+    { "en": "dog", "fa": "سگ", "emoji": "🐶" },
+    { "en": "rabbit", "fa": "خرگوش", "emoji": "🐰" },
+    { "en": "bear", "fa": "خرس", "emoji": "🐻" },
+    { "en": "fox", "fa": "روباه", "emoji": "🦊" },
+    { "en": "owl", "fa": "جغد", "emoji": "🦉" },
+    { "en": "frog", "fa": "قورباغه", "emoji": "🐸" },
+    { "en": "lion", "fa": "شیر", "emoji": "🦁" },
+    { "en": "elephant", "fa": "فیل", "emoji": "🐘" },
+    { "en": "monkey", "fa": "میمون", "emoji": "🐵" },
+    { "en": "fish", "fa": "ماهی", "emoji": "🐟" },
+    { "en": "bird", "fa": "پرنده", "emoji": "🐦" },
+    { "en": "duck", "fa": "اردک", "emoji": "🦆" },
+    { "en": "horse", "fa": "اسب", "emoji": "🐴" },
+    { "en": "cow", "fa": "گاو", "emoji": "🐮" },
+    { "en": "apple", "fa": "سیب", "emoji": "🍎" },
+    { "en": "banana", "fa": "موز", "emoji": "🍌" },
+    { "en": "orange", "fa": "پرتقال", "emoji": "🍊" },
+    { "en": "grapes", "fa": "انگور", "emoji": "🍇" },
+    { "en": "strawberry", "fa": "توت‌فرنگی", "emoji": "🍓" },
+    { "en": "watermelon", "fa": "هندوانه", "emoji": "🍉" },
+    { "en": "cherry", "fa": "گیلاس", "emoji": "🍒" },
+    { "en": "pineapple", "fa": "آناناس", "emoji": "🍍" },
+    { "en": "lemon", "fa": "لیمو", "emoji": "🍋" },
+    { "en": "pear", "fa": "گلابی", "emoji": "🍐" },
+    { "en": "peach", "fa": "هلو", "emoji": "🍑" },
+    { "en": "sun", "fa": "خورشید", "emoji": "☀️" },
+    { "en": "moon", "fa": "ماه", "emoji": "🌙" },
+    { "en": "star", "fa": "ستاره", "emoji": "⭐" },
+    { "en": "tree", "fa": "درخت", "emoji": "🌳" },
+    { "en": "flower", "fa": "گل", "emoji": "🌸" },
+    { "en": "car", "fa": "ماشین", "emoji": "🚗" },
+    { "en": "ball", "fa": "توپ", "emoji": "⚽" },
+    { "en": "book", "fa": "کتاب", "emoji": "📖" },
+    { "en": "house", "fa": "خانه", "emoji": "🏠" },
+    { "en": "cake", "fa": "کیک", "emoji": "🎂" },
+    { "en": "hat", "fa": "کلاه", "emoji": "🎩" },
+    { "en": "boat", "fa": "قایق", "emoji": "⛵" },
+    { "en": "egg", "fa": "تخم‌مرغ", "emoji": "🥚" },
+    { "en": "key", "fa": "کلید", "emoji": "🔑" },
+    { "en": "bed", "fa": "تخت", "emoji": "🛏️" },
+    { "en": "rain", "fa": "باران", "emoji": "🌧️" }
+  ],
+  "rhymes": [
+    { "word": "ماه", "answer": "راه", "wrong": ["گل", "کتاب"] },
+    { "word": "گل", "answer": "بلبل", "wrong": ["میز", "آب"] },
+    { "word": "کتاب", "answer": "آفتاب", "wrong": ["درخت", "سیب"] },
+    { "word": "نان", "answer": "باران", "wrong": ["کفش", "توپ"] },
+    { "word": "خانه", "answer": "لانه", "wrong": ["درخت", "ماه"] },
+    { "word": "سیب", "answer": "جیب", "wrong": ["کلاغ", "نان"] },
+    { "word": "کلاغ", "answer": "باغ", "wrong": ["ابر", "موش"] },
+    { "word": "موش", "answer": "گوش", "wrong": ["ماه", "سیب"] },
+    { "word": "بهار", "answer": "انار", "wrong": ["گربه", "ماه"] },
+    { "word": "درخت", "answer": "تخت", "wrong": ["کفش", "باغ"] },
+    { "word": "ابر", "answer": "ببر", "wrong": ["شیر", "دست"] },
+    { "word": "مداد", "answer": "باد", "wrong": ["گل", "ماهی"] },
+    { "word": "قشنگ", "answer": "رنگ", "wrong": ["ماه", "میز"] },
+    { "word": "پرنده", "answer": "خنده", "wrong": ["ماهی", "کتاب"] },
+    { "word": "شب", "answer": "لب", "wrong": ["گل", "توپ"] },
+    { "word": "آسمان", "answer": "مهربان", "wrong": ["کتاب", "سیب"] }
+  ],
+  "verses": [
+    { "first": "توانا بود هر که دانا بود", "second": "ز دانش دل پیر برنا بود", "poet": "فردوسی" },
+    { "first": "بنی‌آدم اعضای یک پیکرند", "second": "که در آفرینش ز یک گوهرند", "poet": "سعدی" },
+    { "first": "چو عضوی به درد آورد روزگار", "second": "دگر عضوها را نماند قرار", "poet": "سعدی" },
+    { "first": "به نام خداوند جان و خرد", "second": "کزین برتر اندیشه برنگذرد", "poet": "فردوسی" },
+    { "first": "دوست آن باشد که گیرد دست دوست", "second": "در پریشان‌حالی و درماندگی", "poet": "سعدی" },
+    { "first": "میازار موری که دانه‌کش است", "second": "که جان دارد و جان شیرین خوش است", "poet": "فردوسی" },
+    { "first": "ابر و باد و مه و خورشید و فلک در کارند", "second": "تا تو نانی به کف آری و به غفلت نخوری", "poet": "سعدی" },
+    { "first": "درخت تو گر بار دانش بگیرد", "second": "به زیر آوری چرخ نیلوفری را", "poet": "ناصرخسرو" },
+    { "first": "هر کسی از ظن خود شد یار من", "second": "از درون من نجست اسرار من", "poet": "مولوی" },
+    { "first": "چو ایران نباشد تن من مباد", "second": "بدین بوم و بر زنده یک تن مباد", "poet": "فردوسی" }
+  ],
+  "proverbs": [
+    { "text": "قطره قطره جمع گردد، وانگهی دریا شود", "meaning": "چیزهای کوچک کم‌کم جمع می‌شوند و بزرگ می‌شوند." },
+    { "text": "از کوزه همان برون تراود که در اوست", "meaning": "هر کس همان چیزی را نشان می‌دهد که در دلش دارد." },
+    { "text": "هر که بامش بیش، برفش بیشتر", "meaning": "هر کس بیشتر دارد، مسئولیتش هم بیشتر است." },
+    { "text": "کار نیکو کردن از پر کردن است", "meaning": "با تمرین زیاد، کاری را خوب یاد می‌گیریم." },
+    { "text": "دست بالای دست بسیار است", "meaning": "همیشه کسی تواناتر از ما هست؛ مغرور نشویم." },
+    { "text": "یک دست صدا ندارد", "meaning": "با همکاری و کمک هم، کارها انجام می‌شود." },
+    { "text": "ماهی را هر وقت از آب بگیری تازه است", "meaning": "برای شروع یک کار خوب هیچ‌وقت دیر نیست." },
+    { "text": "نابرده رنج گنج میسر نمی‌شود", "meaning": "بدون تلاش و زحمت به نتیجه نمی‌رسیم." },
+    { "text": "تا تنور گرم است باید نان را چسباند", "meaning": "از فرصت‌ها به‌موقع استفاده کنیم." },
+    { "text": "جوجه را آخر پاییز می‌شمارند", "meaning": "نتیجهٔ کار را در پایان آن می‌بینیم." },
+    { "text": "عجله کار شیطان است", "meaning": "با عجله کار خراب می‌شود؛ با حوصله کار کنیم." },
+    { "text": "دوستی خاله خرسه", "meaning": "کمکِ نادرستی که به‌جای فایده، ضرر می‌زند." }
+  ],
+  "images": {
+    "style": "Cute collectible designer vinyl art toy figure, chibi proportions with a big head and small body, soft rounded shapes, glossy vinyl material, big sparkly eyes, a playful friendly smile, kid-friendly, warm soft studio lighting, full body, front view, centered, isolated on a plain pure white background, no text, no logo, no watermark",
+    "boxStyle": "3D render of a single collectible toy blind box, kid-friendly, soft pastel colors, glossy, three-quarter view, centered, isolated on a plain pure white background, no text, no letters, no logo, no watermark",
+    "extra": [
+      {
+        "file": "ui/home_bg.webp",
+        "aspect": "9:16",
+        "prompt": "Dreamy pastel illustration background for a kids' app home screen: a cozy magical toy shop with shelves of colorful mystery gift boxes, soft clouds, little stars and confetti, soft lavender and peach colors, plenty of empty space in the middle, no characters, no text, no logo",
+        "removeBg": false
+      },
+      {
+        "file": "ui/mascot.webp",
+        "aspect": "1:1",
+        "prompt": "Boxi, the mascot of a kids' unboxing app: a small fluffy lavender creature with bunny-like ears, peeking happily out of an open gift box with a pink ribbon, waving one hand",
+        "removeBg": true,
+        "useStyle": true
+      },
+      {
+        "file": "ui/games.webp",
+        "aspect": "1:1",
+        "prompt": "a cheerful pile of colorful toy alphabet blocks, a small book and a game controller shaped like a star, kid-friendly",
+        "removeBg": true,
+        "useStyle": true
+      }
+    ]
+  }
+}
