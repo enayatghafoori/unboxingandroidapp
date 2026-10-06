@@ -47,6 +47,9 @@ python3 tools/generate_images.py            # فقط تصاویری که هنو�
 python3 tools/generate_images.py --dry-run  # فقط نمایش prompt ها
 python3 tools/generate_images.py --only forest_cat --force   # ساخت دوبارهٔ یک تصویر
 ```
+**روش ۳: ساخت دستی (مثلاً در اپ Gemini)**
+همهٔ پرامپت‌ها با اسم فایل هر تصویر در [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md) هستند. تصاویر را با همان اسم‌ها در یک پوشه ذخیره کنید و اجرا کنید: `python3 tools/generate_images.py --import <پوشه>`
+
 اولین عروسک (`forest_cat`) به‌عنوان مرجع سبک به بقیه داده می‌شود تا کل کلکسیون یک‌دست باشد. پس‌زمینهٔ سفید هم خودکار شفاف می‌شود. برای مدل Nano Banana Pro، متغیر `GEMINI_IMAGE_MODEL=gemini-3-pro-image-preview` را تنظیم کنید.
 
 ## ساخت و اجرا

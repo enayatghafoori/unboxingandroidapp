@@ -144,12 +144,37 @@ def save_webp(raw: bytes, dest: Path, remove_bg: bool) -> None:
     im.save(dest, "WEBP", quality=85, method=6)
 
 
+def import_images(jobs: list[dict], src: Path, force: bool) -> int:
+    """Convert hand-made images (e.g. from the Gemini app) into the app's asset files."""
+    files = {f.stem.lower(): f for f in src.iterdir()
+             if f.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp")}
+    done = missing = 0
+    for job in jobs:
+        stem = Path(job["file"]).stem.lower()
+        f = files.get(stem)
+        if f is None:
+            missing += 1
+            continue
+        dest = IMAGES / job["file"]
+        if dest.exists() and not force:
+            print(f"skip {job['file']} (exists, use --force)")
+            continue
+        save_webp(f.read_bytes(), dest, job["removeBg"])
+        done += 1
+        print(f"imported {f.name} -> {dest.relative_to(ROOT)}")
+    print(f"imported {done}, not found {missing}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", nargs="*", help="only these ids or file paths (e.g. forest_cat boxes/tales.webp)")
     ap.add_argument("--force", action="store_true", help="regenerate images that already exist")
     ap.add_argument("--dry-run", action="store_true", help="print prompts without calling the API")
     ap.add_argument("--no-style-ref", action="store_true", help="don't use the first doll as a style reference")
+    ap.add_argument("--import", dest="import_dir", metavar="DIR",
+                    help="instead of calling the API, import images made elsewhere from DIR "
+                         "(files named like forest_cat.png, tales.jpg, home_bg.png)")
     args = ap.parse_args()
 
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
@@ -159,6 +184,9 @@ def main() -> int:
         jobs = [j for j in jobs if j["file"] in wanted or Path(j["file"]).stem in wanted]
     # Generate the style reference first so later dolls can use it.
     jobs.sort(key=lambda j: j["file"] != STYLE_REFERENCE)
+
+    if args.import_dir:
+        return import_images(jobs, Path(args.import_dir).expanduser(), args.force)
 
     if args.dry_run:
         for j in jobs:
