@@ -9,8 +9,8 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.magicbox.kids.audio.Sfx
-import com.magicbox.kids.audio.Speaker
+import com.magicbox.kids.audio.ToneSfx
+import com.magicbox.kids.audio.TtsSpeaker
 import com.magicbox.kids.ui.MagicBoxApp
 import com.magicbox.kids.ui.components.LocalSfx
 import com.magicbox.kids.ui.components.LocalSpeaker
@@ -21,14 +21,14 @@ import kotlinx.coroutines.launch
 class MainActivity : ComponentActivity() {
 
     private val vm: AppViewModel by viewModels()
-    private lateinit var speaker: Speaker
-    private lateinit var sfx: Sfx
+    private lateinit var speaker: TtsSpeaker
+    private lateinit var sfx: ToneSfx
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        speaker = Speaker(this)
-        sfx = Sfx()
+        speaker = TtsSpeaker(this)
+        sfx = ToneSfx()
 
         // Count screen time only while the app is actually on screen.
         lifecycleScope.launch {

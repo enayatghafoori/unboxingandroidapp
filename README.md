@@ -4,6 +4,16 @@
 
 An educational Android app for kids: unbox collectible "blind box" dolls, play mini-games that teach English and Persian literature, and earn stars to open more boxes.
 
+## تصاویر صفحه‌ها
+
+(تصاویر نسخهٔ فعلی با ایموجی موقت؛ بعد از اجرای اسکریپت نانوبنانا، عروسک‌ها و جعبه‌ها با تصاویر واقعی جایگزین می‌شوند.)
+
+<p>
+<img src="docs/screenshots/home.webp" width="200"> <img src="docs/screenshots/shop.webp" width="200"> <img src="docs/screenshots/unbox_cut.webp" width="200"> <img src="docs/screenshots/unbox_reveal.webp" width="200">
+<img src="docs/screenshots/collection.webp" width="200"> <img src="docs/screenshots/games.webp" width="200"> <img src="docs/screenshots/game_spell.webp" width="200"> <img src="docs/screenshots/game_catch.webp" width="200">
+<img src="docs/screenshots/game_verse.webp" width="200"> <img src="docs/screenshots/parent.webp" width="200">
+</p>
+
 ## امکانات
 
 - **آنباکسینگ تعاملی:** کودک جعبه را تکان می‌دهد (۳ ضربه)، نوار چسب را با انگشت می‌بُرد و درش را باز می‌کند. عروسک با نور، کانفتی و لرزش گوشی بیرون می‌آید و خودش را به انگلیسی معرفی می‌کند.

@@ -4,13 +4,23 @@ import android.content.Context
 import android.speech.tts.TextToSpeech
 import java.util.Locale
 
-/** Reads words aloud with the device's text-to-speech engine. */
-class Speaker(context: Context) : TextToSpeech.OnInitListener {
+/** Reads words aloud. */
+interface Speaker {
+    var enabled: Boolean
+    /** False when the device has no Persian voice, so the UI can hide the button. */
+    val canSpeakPersian: Boolean
+    fun speakEnglish(text: String)
+    fun speakPersian(text: String): Boolean
+    fun shutdown()
+}
+
+/** [Speaker] backed by the device's text-to-speech engine. */
+class TtsSpeaker(context: Context) : Speaker, TextToSpeech.OnInitListener {
 
     private val tts = TextToSpeech(context.applicationContext, this)
     private var ready = false
     private var persianAvailable = false
-    var enabled = true
+    override var enabled = true
 
     override fun onInit(status: Int) {
         if (status != TextToSpeech.SUCCESS) return
@@ -19,16 +29,15 @@ class Speaker(context: Context) : TextToSpeech.OnInitListener {
         persianAvailable = tts.isLanguageAvailable(PERSIAN) >= TextToSpeech.LANG_AVAILABLE
     }
 
-    fun speakEnglish(text: String) = speak(text, Locale.US)
+    override val canSpeakPersian: Boolean get() = persianAvailable
 
-    /** Returns false when the device has no Persian voice, so the UI can hide the button. */
-    fun speakPersian(text: String): Boolean {
+    override fun speakEnglish(text: String) = speak(text, Locale.US)
+
+    override fun speakPersian(text: String): Boolean {
         if (!persianAvailable) return false
         speak(text, PERSIAN)
         return true
     }
-
-    val canSpeakPersian: Boolean get() = persianAvailable
 
     private fun speak(text: String, locale: Locale) {
         if (!ready || !enabled) return
@@ -36,7 +45,7 @@ class Speaker(context: Context) : TextToSpeech.OnInitListener {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, text.hashCode().toString())
     }
 
-    fun shutdown() {
+    override fun shutdown() {
         tts.stop()
         tts.shutdown()
     }
