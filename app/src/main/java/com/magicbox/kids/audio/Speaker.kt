@@ -32,7 +32,7 @@ class Speaker(context: Context) : TextToSpeech.OnInitListener {
 
     private fun speak(text: String, locale: Locale) {
         if (!ready || !enabled) return
-        tts.language = locale
+        tts.setLanguage(locale)
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, text.hashCode().toString())
     }
 
