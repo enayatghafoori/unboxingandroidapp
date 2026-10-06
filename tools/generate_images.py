@@ -6,7 +6,7 @@ and writes WebP files into app/src/main/assets/images/. The app shows emoji
 placeholders for any image that does not exist yet, so you can run this at any time.
 
 Usage:
-    pip install pillow
+    pip install pillow "rembg[cpu]"   # rembg is optional: cleaner cut-outs
     export GEMINI_API_KEY=...            # from https://aistudio.google.com/apikey
     python3 tools/generate_images.py              # generate everything that is missing
     python3 tools/generate_images.py --only forest_cat --force
@@ -134,12 +134,47 @@ def remove_white_background(im, tolerance: int = 22):
     return im
 
 
+_rembg_session = None
+
+
+def cut_out(im):
+    """Transparent background: rembg's AI matting when installed, else a white flood fill."""
+    global _rembg_session
+    try:
+        from rembg import new_session, remove
+    except ImportError:
+        return remove_white_background(im)
+    if _rembg_session is None:
+        _rembg_session = new_session("isnet-general-use")
+    out = remove(im.convert("RGB"), session=_rembg_session).convert("RGBA")
+    # Drop the faint haze matting leaves in the background.
+    out.putalpha(out.getchannel("A").point(lambda v: 0 if v < 12 else v))
+    return out
+
+
+def fit_square(im, margin: float = 0.06):
+    """Crop to the figure and centre it on a square transparent canvas."""
+    box = im.getchannel("A").point(lambda v: 255 if v > 40 else 0).getbbox()
+    if box:
+        im = im.crop(box)
+    from PIL import Image
+
+    side = int(max(im.size) * (1 + 2 * margin))
+    canvas = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    canvas.paste(im, ((side - im.width) // 2, (side - im.height) // 2), im)
+    return canvas
+
+
 def save_webp(raw: bytes, dest: Path, remove_bg: bool) -> None:
     from PIL import Image
 
     im = Image.open(io.BytesIO(raw))
-    im.thumbnail((MAX_SIDE, MAX_SIDE * 2))
-    im = remove_white_background(im) if remove_bg else im.convert("RGB")
+    if remove_bg:
+        im = fit_square(cut_out(im))
+        im.thumbnail((MAX_SIDE, MAX_SIDE))
+    else:
+        im = im.convert("RGB")
+        im.thumbnail((MAX_SIDE, MAX_SIDE * 2))
     dest.parent.mkdir(parents=True, exist_ok=True)
     im.save(dest, "WEBP", quality=85, method=6)
 
